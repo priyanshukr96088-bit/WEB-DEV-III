@@ -1,10 +1,14 @@
-const express = require("express");
-const app = express();
-app.use(express.json());
+const tourModel = require("../model/tourmModel");
 
-const tourRoutes = require("./route/tourRoutes");
+//get all tours
+const getAllTours = (req, res) => {
+    const tours = tourModel.getAll();
+    res.json(tours);
+};
+module.exports = {
+    getAllTours
+};
 
-app.use("/api/tours", tourRoutes);
 
 
 
@@ -33,12 +37,3 @@ app.use("/api/tours", tourRoutes);
 //   res.status(201).json(newPackage);
 // });
 
-// app.put('/user/:id',(req,res) => {
-//   console.log(req.params.id);
-//   console.log(req.body);
-//   res.send("user update successfully");
-// });
-
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});  
