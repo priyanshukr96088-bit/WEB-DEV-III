@@ -4,7 +4,7 @@ app.use(express.json());
 
 const tourRoutes = require("./route/tourRoutes");
 
-app.use("/api/tours", tourRoutes);
+app.use("/api", tourRoutes);
 
 
 
