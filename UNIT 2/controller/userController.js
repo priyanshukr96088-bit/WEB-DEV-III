@@ -34,11 +34,11 @@ const updateUser = (req,res) => {
 };
 
 const searchUser = (req,res) => {
-    const destination = req.query.destination;
-    if(!destination) {
-        return res.status(400).json({ message: "Destination query parameter is required" });
+    const user = req.query.user;
+    if(!user) {
+        return res.status(400).json({ message: "User query parameter is required" });
     }
-    const users = userModel.searchUser(destination);
+    const users = userModel.searchUser(user);
     res.json(users);
 };
 

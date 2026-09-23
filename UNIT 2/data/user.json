@@ -3,8 +3,8 @@
     "name":"Adventure Package",
     "description":"An exciting adventure package for thrill-seekers.",
     "price":800,
-    "duration":"3 days"
-    ,"image":"user2.jpg",
+    "duration":"3 days",
+    "image":"user2.jpg",
     "destination":"Goa"
 },
 {
